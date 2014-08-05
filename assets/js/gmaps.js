@@ -17,6 +17,13 @@ function initialize() {
     google.maps.event.addListener(map, 'click', function(event) {
 	    addMarker(event.latLng);
 	});
+
+    if( data_pimap_post.latitude !== "" && data_pimap_post.longitude !== "" ){
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng( data_pimap_post.latitude, data_pimap_post.longitude ),
+            map: map
+        });
+    }
 }
 
 // Add a marker to the map and push to the array.

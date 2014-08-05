@@ -36,9 +36,10 @@
 		private function __construct() {
 			// Require class Odin
 			if( is_admin() ){
-				$this->require_odin();
 				$this->require_admin();
 			}
+
+			$this->require_odin();
 
 			// Load plugin text domain
 			add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
@@ -152,7 +153,7 @@
 
 		    $obj_pin_type->set_arguments(
 		        array(
-		            'hierarchical' => false
+		            'hierarchical' => true
 		        )
 		    );
 		}
@@ -203,6 +204,18 @@
 		 * @return object map
 		 */
 		public function create_map_metabox() {
+			global $post;
+			$pin_latitude = get_post_meta( $post->ID, 'pin_latitude', true );
+			$pin_longitude = get_post_meta( $post->ID, 'pin_longitude', true );
+
+			if( !empty( $pin_latitude ) && !empty( $pin_longitude ) ){
+				$params = array(
+						'latitude' => $pin_latitude,
+						'longitude' => $pin_longitude
+					);
+				wp_localize_script( 'pimap_gmaps_script', 'data_pimap_post', $params );
+			}
+
 		    echo '<div id="pimap_gMaps" class="pimap_maps" style="height:500px; width: 100%"></div>';
 		}
 
@@ -211,9 +224,9 @@
 		 *
 		 */
 		public function load_admin_styles_and_scripts(){
-			global $post_type;
+			// global $post_type;
 
-			if( 'pin' == $post_type ){
+			// if( is_admin() && 'pin' == $post_type ){
 				wp_enqueue_script( 'pimap_gmaps_api', 'https://maps.google.com/maps/api/js?sensor=false', array(), null, true );
 				wp_enqueue_script( 'pimap_gmaps_script', plugins_url( '/assets/js/gmaps.js', __FILE__ ), array(), null, true );
 
@@ -236,8 +249,20 @@
 
 
 				wp_localize_script( 'pimap_gmaps_script', 'data_pimap', $params );
-			}
+			// }
+		}
+
+		/**
+		 * Load map in site
+		 *
+		 */
+		public static function load_map(){
+			$this->create_map_metabox();
 		}
 	}
 
 	add_action( 'plugins_loaded', array( 'Pimap', 'get_instance' ), 0 );
+
+	function display_map(){
+		Pimap::load_map();
+	}
