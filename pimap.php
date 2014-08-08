@@ -224,9 +224,9 @@
 		 *
 		 */
 		public function load_admin_styles_and_scripts(){
-			// global $post_type;
+			global $post_type;
 
-			// if( is_admin() && 'pin' == $post_type ){
+			if( is_admin() && 'pin' == $post_type ){
 				wp_enqueue_script( 'pimap_gmaps_api', 'https://maps.google.com/maps/api/js?sensor=false', array(), null, true );
 				wp_enqueue_script( 'pimap_gmaps_script', plugins_url( '/assets/js/gmaps.js', __FILE__ ), array(), null, true );
 
@@ -249,20 +249,63 @@
 
 
 				wp_localize_script( 'pimap_gmaps_script', 'data_pimap', $params );
-			// }
-		}
-
-		/**
-		 * Load map in site
-		 *
-		 */
-		public static function load_map(){
-			$this->create_map_metabox();
+			}
 		}
 	}
-
 	add_action( 'plugins_loaded', array( 'Pimap', 'get_instance' ), 0 );
 
-	function display_map(){
-		Pimap::load_map();
-	}
+		function load_scripts(){
+			wp_enqueue_script( 'pimap_gmaps_api_view', 'https://maps.google.com/maps/api/js?sensor=false', array(), null, true );
+			wp_enqueue_script( 'pimap_gmaps_script_view', plugins_url( '/assets/js/gmaps_view.js', __FILE__ ), array(), null, true );
+
+			$latitude = '';
+			$longitude = '';
+			$zoom = '';
+			$valueArr = get_option( 'pimap_setings_main', array() );
+			if( isset( $valueArr['pimap_latitude'] ) )
+				$latitude = $valueArr['pimap_latitude'];
+			if( isset( $valueArr['pimap_longitude'] ) )
+				$longitude = $valueArr['pimap_longitude'];
+			if( isset( $valueArr['pimap_zoom'] ) )
+				$zoom = $valueArr['pimap_zoom'];
+
+			$params = array(
+							'latitude' => $latitude,
+							'longitude' => $longitude,
+							'zoom' => $zoom
+						);
+			wp_localize_script( 'pimap_gmaps_script_view', 'data_pimap', $params );
+		}
+		add_action( 'wp_enqueue_scripts', 'load_scripts' );
+
+		function display_map() {
+
+			$pins = array();
+			$obj_posts = new WP_query( array( 'post_type' => 'pin', 'posts_per_page' => '-1' ) );
+			if( $obj_posts->have_posts() ){
+				while( $obj_posts->have_posts() ){
+					$obj_posts->the_post();
+
+					$latitude = get_post_meta( get_the_ID(), 'pin_latitude', true );
+					$longitude = get_post_meta( get_the_ID(), 'pin_longitude', true );
+					$title = get_the_title();
+					$content = get_the_content();
+
+					$pins[] = array(
+							'latitude' => $latitude,
+							'longitude' => $longitude,
+							'title' => $title,
+							'content' => $content
+						);
+				}
+				wp_reset_postdata();
+				wp_localize_script( 'pimap_gmaps_script_view', 'pins', $pins );
+			}
+
+
+			if( !empty( $pins ) ){
+				wp_localize_script( 'pimap_gmaps_script', 'data_pimap_post', $pins );
+			}
+
+		    echo '<div id="pimap_gMaps" class="pimap_maps" style="height:500px; width: 100%"></div>';
+		}
