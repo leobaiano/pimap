@@ -255,7 +255,10 @@
 	add_action( 'plugins_loaded', array( 'Pimap', 'get_instance' ), 0 );
 
 		function load_scripts(){
+			wp_enqueue_style( 'pimap_style', plugins_url( '/assets/css/style.css', __FILE__ ), array(), null, 'all' );
+
 			wp_enqueue_script( 'pimap_gmaps_api_view', 'https://maps.google.com/maps/api/js?sensor=false', array(), null, true );
+			wp_enqueue_script( 'pimap_gmaps_infobox', plugins_url( '/assets/js/infobox.js', __FILE__ ), array(), null, true );
 			wp_enqueue_script( 'pimap_gmaps_script_view', plugins_url( '/assets/js/gmaps_view.js', __FILE__ ), array(), null, true );
 
 			$latitude = '';
@@ -290,8 +293,10 @@
 					$longitude = get_post_meta( get_the_ID(), 'pin_longitude', true );
 					$title = get_the_title();
 					$content = get_the_content();
+					$id = get_the_ID();
 
 					$pins[] = array(
+							'id' => $id,
 							'latitude' => $latitude,
 							'longitude' => $longitude,
 							'title' => $title,
