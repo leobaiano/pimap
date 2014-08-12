@@ -47,7 +47,7 @@
 				'pimap_options',
 				array( $this, 'settings_page' ),
 				'',
-				28
+				50.1
 			);
 		}
 
