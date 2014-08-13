@@ -12,7 +12,7 @@ Plugin allows users to mark the number of stars of each post and display the ave
 
 == Description ==
 
-A plugin that allows users to record information that will be displayed on the google maps pins. This plugin is specific to presentation of political actions in certain regions, it is possible to divide the buttons into categories so that users can filter and show only what matters.
+A plugin that allows users to record information that will be displayed on the google maps pins.
 
 = Credits =
 
@@ -33,6 +33,14 @@ e.g.
 3. Upload folder post-ranking-view, you just unzip to `/wp-content/plugins/` directory;
 4. Activate the plugin through the `Plugins` menu in WordPress;
 5. Be happy.
+
+== Screenshots ==
+
+1. Initial options, the center of the map and zoom
+
+2. Registration pin
+
+3. Displaying the map on the site
 
 == Changelog ==
 
