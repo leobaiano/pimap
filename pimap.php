@@ -17,8 +17,6 @@
 	/**
 	 * Pimap
 	 *
-	 * @package  Social_Count_Plus/Admin
-	 * @category Admin
 	 * @author   Leo Baiano <leobaiano@lbideias.com.br>
 	 */
 	class Pimap {
