@@ -34,6 +34,15 @@ e.g.
 4. Activate the plugin through the `Plugins` menu in WordPress;
 5. Be happy.
 
+Displaying the map on the site
+Add the code below where you want the map to appear:
+
+<?php
+if ( function_exists( 'display_map' ) ) {
+    display_map();
+}
+?>
+
 == Screenshots ==
 
 1. Initial options, the center of the map and zoom
