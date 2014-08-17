@@ -8,7 +8,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Plugin allows users to mark the number of stars of each post and display the average.
+A plugin that allows users to record information that will be displayed on the google maps pins.
 
 == Description ==
 
