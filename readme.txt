@@ -1,4 +1,4 @@
-=== Post Star ===
+=== Pimap ===
 Contributors: leobaiano
 Donate link: http://lbideias.com.br/donate
 Tags: maps, google maps
@@ -37,12 +37,12 @@ e.g.
 Displaying the map on the site
 Add the code below where you want the map to appear:
 
-<?php
+`<?php
 if ( function_exists( 'display_map' ) ) {
     display_map();
 }
 ?>
-
+`
 == Screenshots ==
 
 1. Initial options, the center of the map and zoom
