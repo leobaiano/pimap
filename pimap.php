@@ -5,7 +5,7 @@
 	 * Description: Create and register pins google maps with comments, pictures and videos
 	 * Author: leobaiano
 	 * Author URI: http://lbideias.com.br
-	 * Version: 1.0.0
+	 * Version: 1.1.0
 	 * License: GPLv2 or later
 	 * Text Domain: pimap
  	 * Domain Path: /languages/
@@ -40,7 +40,7 @@
 			$this->require_odin();
 
 			// Load plugin text domain
-			add_action( 'init', array( $this, 'load_plugin_textdomain' ) );
+			add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
 
 			// Create and load Pin post type
 			add_action( 'init', array( $this, 'create_pin_post_type' ), 1 );
@@ -78,10 +78,7 @@
 		 * @return void
 		 */
 		public function load_plugin_textdomain() {
-			$locale = apply_filters( 'plugin_locale', get_locale(), 'pimap' );
-
-			load_textdomain( 'pimap', trailingslashit( WP_LANG_DIR ) . 'pimap/pimap-' . $locale . '.mo' );
-			load_plugin_textdomain( 'pimap', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+			load_plugin_textdomain( 'pimap', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		}
 
 		/**

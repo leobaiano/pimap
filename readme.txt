@@ -3,8 +3,8 @@ Contributors: leobaiano
 Donate link: http://lbideias.com.br/donate
 Tags: maps, google maps
 Requires at least: 3.8
-Tested up to: 3.9.1
-Stable tag: 1.0
+Tested up to: 3.9.2
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,8 +51,15 @@ if ( function_exists( 'display_map' ) ) {
 
 3. Displaying the map on the site
 
+4. Displaying image and content in infobox
+
 == Changelog ==
 
 = 1.0 2014-08-02 =
 
 * Creation of the plugin, the initial version.
+
+= 1.1 2014-08-21 =
+
+* Displaying image and content in infobox.
+* Translation into Portuguese of Brazil
