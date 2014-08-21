@@ -290,15 +290,17 @@
 					$latitude = get_post_meta( get_the_ID(), 'pin_latitude', true );
 					$longitude = get_post_meta( get_the_ID(), 'pin_longitude', true );
 					$title = get_the_title();
-					$content = get_the_content();
+					$content = get_the_excerpt();
 					$id = get_the_ID();
+					$image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'medium' );
 
 					$pins[] = array(
 							'id' => $id,
 							'latitude' => $latitude,
 							'longitude' => $longitude,
 							'title' => $title,
-							'content' => $content
+							'content' => $content,
+							'image' => $image[0],
 						);
 				}
 				wp_reset_postdata();

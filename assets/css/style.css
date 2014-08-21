@@ -1,14 +1,28 @@
 .infoBox{
 	background-color: #FFF;
-	width: 300px;
+	width: 320px;
 	font-size: 14px;
 	border: 2px solid #df1500;
 	border-radius: 3px;
 	margin-top: 10px;
-	padding:10px;
+	padding:10px 0;
+}
+.infoBox h2{
+	text-align:center;
+	color:#000000;
+	font-size:1.25rem;
+}
+.infoBox .box-image{
+	width:300px;
+	margin:0 auto;
+}
+.infoBox .box-image img{
+	min-width: 100%;
 }
 .infoBox p{
-	padding: 0 15px
+	color:#000000;
+	padding:0 10px;
+	margin-top:5px;
 }
 .infoBox:before{
 	border-left: 10px solid transparent;

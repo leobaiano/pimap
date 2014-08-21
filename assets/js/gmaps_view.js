@@ -23,7 +23,7 @@ function initialize() {
 
 
         var myOptions = {
-            content: "<p>" + ponto.title + "</p>",
+            content: "<h2>" + ponto.title + "</h2>" + "<div class='box-image'><img src='" + ponto.image + "' /></div><p>" + ponto.content + "</p>",
             pixelOffset: new google.maps.Size(-150, 0)
         };
         infoBox[ponto.id] = new InfoBox(myOptions);
