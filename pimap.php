@@ -5,7 +5,7 @@
 	 * Description: Create and register pins google maps with comments, pictures and videos
 	 * Author: leobaiano
 	 * Author URI: http://lbideias.com.br
-	 * Version: 1.1.0
+	 * Version: 1.1.1
 	 * License: GPLv2 or later
 	 * Text Domain: pimap
  	 * Domain Path: /languages/

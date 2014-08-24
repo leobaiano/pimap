@@ -21,9 +21,17 @@ function initialize() {
             map: map
         });
 
+        var content = "<h2>" + ponto.title + "</h2>";
+        if( ponto.image != null ){
+            content += "<div class='box-image'><img src='" + ponto.image + "' /></div>";
+        }
+        console.log(ponto.image);
+        if( ponto.content != null){
+            content += "<p>" + ponto.content + "</p>";
+        }
 
         var myOptions = {
-            content: "<h2>" + ponto.title + "</h2>" + "<div class='box-image'><img src='" + ponto.image + "' /></div><p>" + ponto.content + "</p>",
+            content: content,
             pixelOffset: new google.maps.Size(-150, 0)
         };
         infoBox[ponto.id] = new InfoBox(myOptions);
@@ -31,14 +39,6 @@ function initialize() {
         infoBox[ponto.id].listener = google.maps.event.addListener(marker, 'click', function (e) {
             abrirInfoBox(ponto.id, marker);
         });
-
-        // var infowindow = new google.maps.InfoWindow(), marker;
-        // google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        //     return function() {
-        //         infowindow.setContent(ponto.title);
-        //         infowindow.open(map, marker);
-        //     }
-        // })(marker))
     });
 }
 
