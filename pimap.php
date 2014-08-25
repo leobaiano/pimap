@@ -3,9 +3,9 @@
 	 * Plugin Name: Pimap
 	 * Plugin URI: 
 	 * Description: Create and register pins google maps with comments, pictures and videos
-	 * Author: leobaiano
+	 * Author: leobaiano, Valerio Souza
 	 * Author URI: http://lbideias.com.br
-	 * Version: 1.1.1
+	 * Version: 1.2.0
 	 * License: GPLv2 or later
 	 * Text Domain: pimap
  	 * Domain Path: /languages/
@@ -56,6 +56,8 @@
 
 			// Load styles and script
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_admin_styles_and_scripts' ) );
+
+			add_shortcode( 'pimap', 'pi_map_shortcode' );
 		}
 
 		/**
@@ -311,4 +313,11 @@
 			}
 
 		    echo '<div id="pimap_gMaps" class="pimap_maps" style="height:500px; width: 100%"></div>';
+		}
+
+		function pi_map_shortcode() {
+
+			if ( function_exists( 'display_map' ) ) {
+    			display_map();
+			}
 		}
