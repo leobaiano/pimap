@@ -108,6 +108,7 @@
 			);
 			$obj_pin->set_arguments(
 			    array(
+			    	'menu_icon' => 'dashicons-location-alt',
 			        'supports' => array( 'title', 'excerpt', 'thumbnail' )
 			    )
 			);
