@@ -9,7 +9,7 @@ function initialize() {
         zoom: parseInt( data_pimap.zoom),
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        scrollwheel: false,
+        scrollwheel: true,
     };
 
     map = new google.maps.Map(document.getElementById("pimap_gMaps"), options);
