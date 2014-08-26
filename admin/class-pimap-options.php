@@ -102,19 +102,6 @@
 					'settings' => 'pimap_setings_main'
 				)
 			);
-			add_settings_field(
-				'pimap_size_map',
-				__( 'Map Size', 'pimap' ),
-				array( $this, 'text_element_callback' ),
-				'pimap_options',
-				'pimap_settings_section',
-				array(
-					'name' => 'pimap_size_map',
-					'id' => 'pimap_size_map',
-					'class' => 'input_text',
-					'settings' => 'pimap_setings_main'
-				)
-			);
 
 		 	register_setting( 'pimap_settings', 'pimap_setings_main' );
 		}
