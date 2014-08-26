@@ -37,9 +37,7 @@
 				$this->require_admin();
 			}
 
-			//$this->require_odin();
-
-			add_action('after_setup_theme', array( $this, 'require_odin' ));
+			$this->require_odin();
 
 			// Load plugin text domain
 			add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
@@ -88,17 +86,10 @@
 		/**
 		 * Require classes Odin framework
 		 */
-		public function require_odin() {
-			if (!class_exists('Odin_Post_Type', false)) {
-				print_r($this);
-    			require_once 'Odin/core/classes/class-post-type.php';
-			}
-			if (!class_exists('Odin_Taxonomy', false)) {
-				require_once 'Odin/core/classes/class-taxonomy.php';
-			}
-			if (!class_exists('Odin_Metabox', false)) {
-				require_once 'Odin/core/classes/class-metabox.php';
-			}
+		protected function require_odin() {
+			require_once 'Odin/core/classes/class-post-type.php';
+			require_once 'Odin/core/classes/class-taxonomy.php';
+			require_once 'Odin/core/classes/class-metabox.php';
 		}
 
 		/**
@@ -137,7 +128,6 @@
 		            'not_found_in_trash' => __( 'Not found in trash', 'pimap' ),
 		            'parent_item_colon' => __( 'Parent:', 'pimap' ),
 		            'menu_name' => __( 'Pimap', 'pimap' ),
-		            'all_items' => __( 'All Pins', 'odin' )
 			    )
 			);
 		}
@@ -248,14 +238,11 @@
 					$longitude = $valueArr['pimap_longitude'];
 				if( isset( $valueArr['pimap_zoom'] ) )
 					$zoom = $valueArr['pimap_zoom'];
-				if( isset( $valueArr['pimap_size_map'] ) )
-					$mapsize = $valueArr['pimap_size_map'];
 
 				$params = array(
 								'latitude' => $latitude,
 								'longitude' => $longitude,
-								'zoom' => $zoom,
-								'mapsize' => $mapsize
+								'zoom' => $zoom
 							);
 
 
@@ -282,29 +269,17 @@
 				$longitude = $valueArr['pimap_longitude'];
 			if( isset( $valueArr['pimap_zoom'] ) )
 				$zoom = $valueArr['pimap_zoom'];
-			if( isset( $valueArr['pimap_size_map'] ) )
-				$mapsize = $valueArr['pimap_size_map'];
 
 			$params = array(
 							'latitude' => $latitude,
 							'longitude' => $longitude,
-							'zoom' => $zoom,
-							'mapsize' => $mapsize
+							'zoom' => $zoom
 						);
 			wp_localize_script( 'pimap_gmaps_script_view', 'data_pimap', $params );
 		}
 		add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 		function display_map() {
-			$valueArr = get_option( 'pimap_setings_main', array() );
-			if( isset( $valueArr['pimap_latitude'] ) )
-				$latitude = $valueArr['pimap_latitude'];
-			if( isset( $valueArr['pimap_longitude'] ) )
-				$longitude = $valueArr['pimap_longitude'];
-			if( isset( $valueArr['pimap_zoom'] ) )
-				$zoom = $valueArr['pimap_zoom'];
-			if( isset( $valueArr['pimap_size_map'] ) )
-				$mapsize = $valueArr['pimap_size_map'];
 
 			$pins = array();
 			$obj_posts = new WP_query( array( 'post_type' => 'pin', 'posts_per_page' => '-1' ) );
@@ -337,7 +312,7 @@
 				wp_localize_script( 'pimap_gmaps_script', 'data_pimap_post', $pins );
 			}
 
-		    echo '<div id="pimap_gMaps" class="pimap_maps" style="height:'.$mapsize.'; width: 100%"></div>';
+		    echo '<div id="pimap_gMaps" class="pimap_maps" style="height:500px; width: 100%"></div>';
 		}
 
 		function pi_map_shortcode() {
