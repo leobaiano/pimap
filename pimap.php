@@ -225,7 +225,7 @@
 			global $post_type;
 
 			if( is_admin() && 'pin' == $post_type ){
-				wp_enqueue_script( 'pimap_gmaps_api', 'https://maps.google.com/maps/api/js?sensor=true', array(), null, true );
+				wp_enqueue_script( 'pimap_gmaps_api', 'https://maps.google.com/maps/api/js', array(), null, true );
 				wp_enqueue_script( 'pimap_gmaps_script', plugins_url( '/assets/js/gmaps.js', __FILE__ ), array(), null, true );
 
 				$latitude = '';
@@ -255,7 +255,7 @@
 		function load_scripts(){
 			wp_enqueue_style( 'pimap_style', plugins_url( '/assets/css/style.css', __FILE__ ), array(), null, 'all' );
 
-			wp_enqueue_script( 'pimap_gmaps_api_view', 'https://maps.google.com/maps/api/js?sensor=true', array(), null, true );
+			wp_enqueue_script( 'pimap_gmaps_api_view', 'https://maps.google.com/maps/api/js', array(), null, true );
 			wp_enqueue_script( 'pimap_gmaps_infobox', plugins_url( '/assets/js/infobox.js', __FILE__ ), array(), null, true );
 			wp_enqueue_script( 'pimap_gmaps_script_view', plugins_url( '/assets/js/gmaps_view.js', __FILE__ ), array(), null, true );
 
