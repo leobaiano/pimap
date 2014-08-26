@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pimap\n"
-"POT-Creation-Date: 2014-08-26 15:42-0300\n"
-"PO-Revision-Date: 2014-08-26 15:46-0300\n"
+"POT-Creation-Date: 2014-08-26 16:13-0300\n"
+"PO-Revision-Date: 2014-08-26 16:13-0300\n"
 "Last-Translator: Valério <valeriosza@gmail.com>\n"
 "Language-Team: Leo Baiano <leobaiano@lbideias.com.br>\n"
 "Language: pt_BR\n"
@@ -115,9 +115,9 @@ msgstr ""
 
 #: ../Odin/core/classes/class-post-type.php:75
 #: ../Odin/core/classes/class-taxonomy.php:78
-#, fuzzy, php-format
+#, php-format
 msgid "View %s"
-msgstr "Visualizar"
+msgstr "Visualizar %s"
 
 #: ../Odin/core/classes/class-post-type.php:76
 #: ../Odin/core/classes/class-taxonomy.php:79
@@ -297,17 +297,21 @@ msgstr "Opções Pimap"
 msgid "Set the options of the plugin Pimap"
 msgstr "Configurações do plugin Pimap"
 
-#: ../admin/class-pimap-options.php:68 ../pimap.php:185 ../pimap.php:188
+#: ../admin/class-pimap-options.php:68 ../pimap.php:186 ../pimap.php:189
 msgid "Latitude"
 msgstr "Latitude"
 
-#: ../admin/class-pimap-options.php:81 ../pimap.php:195 ../pimap.php:198
+#: ../admin/class-pimap-options.php:81 ../pimap.php:196 ../pimap.php:199
 msgid "Longitude"
 msgstr "Longitude"
 
 #: ../admin/class-pimap-options.php:94
 msgid "Zoom"
 msgstr "Zoom"
+
+#: ../admin/class-pimap-options.php:107
+msgid "Map Size"
+msgstr ""
 
 #: ../pimap.php:128 ../pimap.php:129 ../pimap.php:139
 msgid "Pimap"
@@ -341,10 +345,14 @@ msgstr "Nenhum resultado encontrado na lixeira"
 msgid "Parent:"
 msgstr "Parent:"
 
-#: ../pimap.php:157
+#: ../pimap.php:140
+msgid "All Pins"
+msgstr "Todos os Pins"
+
+#: ../pimap.php:158
 msgid "Pin Type"
 msgstr "Tipo de Pin"
 
-#: ../pimap.php:175
+#: ../pimap.php:176
 msgid "Pin Position"
 msgstr "Posição do Pin"
