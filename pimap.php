@@ -37,7 +37,9 @@
 				$this->require_admin();
 			}
 
-			$this->require_odin();
+			//$this->require_odin();
+
+			add_action('after_setup_theme', array( $this, 'require_odin' ));
 
 			// Load plugin text domain
 			add_action( 'plugins_loaded', array( $this, 'load_plugin_textdomain' ) );
@@ -86,10 +88,17 @@
 		/**
 		 * Require classes Odin framework
 		 */
-		protected function require_odin() {
-			require_once 'Odin/core/classes/class-post-type.php';
-			require_once 'Odin/core/classes/class-taxonomy.php';
-			require_once 'Odin/core/classes/class-metabox.php';
+		public function require_odin() {
+			if (!class_exists('Odin_Post_Type', false)) {
+				print_r($this);
+    			require_once 'Odin/core/classes/class-post-type.php';
+			}
+			if (!class_exists('Odin_Taxonomy', false)) {
+				require_once 'Odin/core/classes/class-taxonomy.php';
+			}
+			if (!class_exists('Odin_Metabox', false)) {
+				require_once 'Odin/core/classes/class-metabox.php';
+			}
 		}
 
 		/**
