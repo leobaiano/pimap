@@ -3,9 +3,9 @@
 	 * Plugin Name: Pimap
 	 * Plugin URI: 
 	 * Description: Create and register pins google maps with comments, pictures and videos
-	 * Author: leobaiano
+	 * Author: leobaiano, Valerio Souza
 	 * Author URI: http://lbideias.com.br
-	 * Version: 1.1.1
+	 * Version: 1.2.0
 	 * License: GPLv2 or later
 	 * Text Domain: pimap
  	 * Domain Path: /languages/
@@ -56,6 +56,8 @@
 
 			// Load styles and script
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_admin_styles_and_scripts' ) );
+
+			add_shortcode( 'pimap', 'pi_map_shortcode' );
 		}
 
 		/**
@@ -108,6 +110,7 @@
 			);
 			$obj_pin->set_arguments(
 			    array(
+			    	'menu_icon' => 'dashicons-location-alt',
 			        'supports' => array( 'title', 'excerpt', 'thumbnail' )
 			    )
 			);
@@ -222,7 +225,7 @@
 			global $post_type;
 
 			if( is_admin() && 'pin' == $post_type ){
-				wp_enqueue_script( 'pimap_gmaps_api', 'https://maps.google.com/maps/api/js?sensor=false', array(), null, true );
+				wp_enqueue_script( 'pimap_gmaps_api', 'https://maps.google.com/maps/api/js?sensor=true', array(), null, true );
 				wp_enqueue_script( 'pimap_gmaps_script', plugins_url( '/assets/js/gmaps.js', __FILE__ ), array(), null, true );
 
 				$latitude = '';
@@ -252,7 +255,7 @@
 		function load_scripts(){
 			wp_enqueue_style( 'pimap_style', plugins_url( '/assets/css/style.css', __FILE__ ), array(), null, 'all' );
 
-			wp_enqueue_script( 'pimap_gmaps_api_view', 'https://maps.google.com/maps/api/js?sensor=false', array(), null, true );
+			wp_enqueue_script( 'pimap_gmaps_api_view', 'https://maps.google.com/maps/api/js?sensor=true', array(), null, true );
 			wp_enqueue_script( 'pimap_gmaps_infobox', plugins_url( '/assets/js/infobox.js', __FILE__ ), array(), null, true );
 			wp_enqueue_script( 'pimap_gmaps_script_view', plugins_url( '/assets/js/gmaps_view.js', __FILE__ ), array(), null, true );
 
@@ -310,4 +313,11 @@
 			}
 
 		    echo '<div id="pimap_gMaps" class="pimap_maps" style="height:500px; width: 100%"></div>';
+		}
+
+		function pi_map_shortcode() {
+
+			if ( function_exists( 'display_map' ) ) {
+    			display_map();
+			}
 		}

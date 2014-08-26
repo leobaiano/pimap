@@ -1,10 +1,10 @@
 === Pimap ===
-Contributors: leobaiano
+Contributors: leobaiano, valeriosza
 Donate link: http://lbideias.com.br/donate
-Tags: maps, google maps
+Tags: maps, google maps, shortcode, local, contact, map, map info
 Requires at least: 3.8
-Tested up to: 3.9.2
-Stable tag: 1.1.1
+Tested up to: 4.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,11 @@ if ( function_exists( 'display_map' ) ) {
 }
 ?>
 `
+For include in your post, page and etc, use shortcode
+
+`[pimap]`
+
+
 == Screenshots ==
 
 1. Initial options, the center of the map and zoom
@@ -54,6 +59,10 @@ if ( function_exists( 'display_map' ) ) {
 4. Displaying image and content in infobox
 
 == Changelog ==
+
+= 1.2 2014-08-25 =
+
+* Create shortcode [pimap], active scroll on mouse, active sensor geolocation, change icon wp-admin.
 
 = 1.0 2014-08-02 =
 
@@ -67,3 +76,9 @@ if ( function_exists( 'display_map' ) ) {
 = 1.1.1 2014-08-24 =
 
 * Fix bug in the display of pins without image
+
+== Upgrade Notice ==
+
+= 1.2 2014-08-25 =
+
+* Create shortcode [pimap], active scroll on mouse, active sensor geolocation, change icon wp-admin.
