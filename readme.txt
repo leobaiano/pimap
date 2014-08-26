@@ -60,25 +60,26 @@ For include in your post, page and etc, use shortcode
 
 == Changelog ==
 
-= 1.2 2014-08-25 =
+= 1.2.0 2014-08-25 =
 
-* Create shortcode [pimap], active scroll on mouse, active sensor geolocation, change icon wp-admin.
-
-= 1.0 2014-08-02 =
-
-* Creation of the plugin, the initial version.
-
-= 1.1 2014-08-21 =
-
-* Displaying image and content in infobox.
-* Translation into Portuguese of Brazil
+* Create shortcode [pimap], active scroll on mouse and change icon wp-admin.
 
 = 1.1.1 2014-08-24 =
 
 * Fix bug in the display of pins without image
 
+= 1.1.0 2014-08-21 =
+
+* Displaying image and content in infobox.
+* Translation into Portuguese of Brazil
+
+= 1.0.0 2014-08-02 =
+
+* Creation of the plugin, the initial version.
+
+
 == Upgrade Notice ==
 
-= 1.2 2014-08-25 =
+= 1.2.0 2014-08-25 =
 
-* Create shortcode [pimap], active scroll on mouse, active sensor geolocation, change icon wp-admin.
+* Create shortcode [pimap], active scroll on mouse and change icon wp-admin.
