@@ -1,84 +1,358 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pimap\n"
-"POT-Creation-Date: 2014-08-21 09:23-0300\n"
-"PO-Revision-Date: 2014-08-21 09:25-0300\n"
-"Last-Translator: Leo Baiano <leobaiano@lbideias.com.br>\n"
+"POT-Creation-Date: 2014-08-26 16:13-0300\n"
+"PO-Revision-Date: 2014-08-26 16:13-0300\n"
+"Last-Translator: Valério <valeriosza@gmail.com>\n"
 "Language-Team: Leo Baiano <leobaiano@lbideias.com.br>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.8\n"
-"X-Poedit-Basepath: D:\\xampp\\htdocs\\wordpress\\wp-content\\plugins\\pimap\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: ./\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: Odin\n"
 "X-Poedit-SearchPathExcluded-1: assets\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
 
-#: admin/class-pimap-options.php:44 admin/class-pimap-options.php:45
-#: admin/view_options.php:8
-msgid "Pimap Options"
-msgstr "Opções Pimap"
+#: ../Odin/core/classes/abstracts/abstract-front-end-form.php:287
+msgid "Submit"
+msgstr "Salvar"
 
-#: admin/class-pimap-options.php:61
-msgid "Set the options of the plugin Pimap"
-msgstr "Configurações do plugin Pimap"
+#: ../Odin/core/classes/abstracts/abstract-front-end-form.php:330
+msgid "Form submitted successfully!"
+msgstr "Gravado com sucesso"
 
-#: admin/class-pimap-options.php:68 pimap.php:176 pimap.php:179
-msgid "Latitude"
-msgstr "Latitude"
+#: ../Odin/core/classes/abstracts/abstract-front-end-form.php:585
+#: ../Odin/core/classes/abstracts/abstract-front-end-form.php:597
+#, php-format
+msgid "%s is required."
+msgstr "%s é obrigatório."
 
-#: admin/class-pimap-options.php:81 pimap.php:186 pimap.php:189
-msgid "Longitude"
-msgstr "Longitude"
+#: ../Odin/core/classes/abstracts/abstract-front-end-form.php:591
+#, php-format
+msgid "%s must be an email address valid."
+msgstr "%s não é um email válido."
 
-#: admin/class-pimap-options.php:94
-msgid "Zoom"
-msgstr "Zoom"
+#: ../Odin/core/classes/class-bootstrap-nav.php:203
+msgid "Add a menu"
+msgstr ""
 
-#: pimap.php:119 pimap.php:120 pimap.php:130
-msgid "Pimap"
-msgstr "Pimap"
+#: ../Odin/core/classes/class-contact-form.php:182
+#, php-format
+msgid "Message sent by the form %s in %s at %s"
+msgstr ""
 
-#: pimap.php:121 pimap.php:122
+#: ../Odin/core/classes/class-metabox.php:87
+#: ../Odin/core/classes/class-metabox.php:470
+#: ../Odin/core/classes/class-theme-options.php:89
+#: ../Odin/core/classes/class-theme-options.php:622
+#: ../Odin/core/classes/class-user-meta.php:70
+#: ../Odin/core/classes/class-user-meta.php:409
+msgid "Add images in gallery"
+msgstr ""
+
+#: ../Odin/core/classes/class-metabox.php:88
+#: ../Odin/core/classes/class-theme-options.php:90
+#: ../Odin/core/classes/class-user-meta.php:71
+msgid "Add in gallery"
+msgstr ""
+
+#: ../Odin/core/classes/class-metabox.php:89
+#: ../Odin/core/classes/class-metabox.php:431
+#: ../Odin/core/classes/class-metabox.php:459
+#: ../Odin/core/classes/class-theme-options.php:91
+#: ../Odin/core/classes/class-theme-options.php:573
+#: ../Odin/core/classes/class-theme-options.php:611
+#: ../Odin/core/classes/class-user-meta.php:72
+#: ../Odin/core/classes/class-user-meta.php:370
+#: ../Odin/core/classes/class-user-meta.php:398
+msgid "Remove image"
+msgstr ""
+
+#: ../Odin/core/classes/class-metabox.php:90
+#: ../Odin/core/classes/class-theme-options.php:92
+#: ../Odin/core/classes/class-user-meta.php:73
+msgid "Choose a file"
+msgstr ""
+
+#: ../Odin/core/classes/class-metabox.php:91
+#: ../Odin/core/classes/class-theme-options.php:93
+#: ../Odin/core/classes/class-user-meta.php:74
+#, fuzzy
+msgid "Add file"
+msgstr "Adicionar novo"
+
+#: ../Odin/core/classes/class-metabox.php:408
+#: ../Odin/core/classes/class-theme-options.php:539
+#: ../Odin/core/classes/class-user-meta.php:347
+msgid "Select file"
+msgstr ""
+
+#: ../Odin/core/classes/class-metabox.php:431
+#: ../Odin/core/classes/class-theme-options.php:573
+#: ../Odin/core/classes/class-user-meta.php:370
+msgid "Select image"
+msgstr ""
+
+#: ../Odin/core/classes/class-post-type.php:73
+#: ../Odin/core/classes/class-post-type.php:80
+#: ../Odin/core/classes/class-taxonomy.php:75
+#: ../Odin/core/classes/class-taxonomy.php:84
+#, php-format
+msgid "%ss"
+msgstr ""
+
+#: ../Odin/core/classes/class-post-type.php:74
+#: ../Odin/core/classes/class-taxonomy.php:76
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: ../Odin/core/classes/class-post-type.php:75
+#: ../Odin/core/classes/class-taxonomy.php:78
+#, php-format
+msgid "View %s"
+msgstr "Visualizar %s"
+
+#: ../Odin/core/classes/class-post-type.php:76
+#: ../Odin/core/classes/class-taxonomy.php:79
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: ../Odin/core/classes/class-post-type.php:77
+#: ../Odin/core/classes/class-taxonomy.php:80
+#, php-format
+msgid "Search %s"
+msgstr "Pesquisar %s"
+
+#: ../Odin/core/classes/class-post-type.php:78
+#: ../Odin/core/classes/class-taxonomy.php:81
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: ../Odin/core/classes/class-post-type.php:79
+#: ../Odin/core/classes/class-taxonomy.php:82
+#: ../Odin/core/classes/class-taxonomy.php:83
+#, php-format
+msgid "Parent %s:"
+msgstr "Parent %s:"
+
+#: ../Odin/core/classes/class-post-type.php:81 ../pimap.php:130
+#: ../pimap.php:131
 msgid "Add New"
 msgstr "Adicionar novo"
 
-#: pimap.php:123
+#: ../Odin/core/classes/class-post-type.php:82
+#: ../Odin/core/classes/class-taxonomy.php:85
+#, php-format
+msgid "Add New %s"
+msgstr "Adicionar novo %s"
+
+#: ../Odin/core/classes/class-post-type.php:83
+#: ../Odin/core/classes/class-taxonomy.php:86
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: ../Odin/core/classes/class-post-type.php:84
+#: ../Odin/core/classes/class-taxonomy.php:87
+#, php-format
+msgid "All %ss"
+msgstr "Todos %ss"
+
+#: ../Odin/core/classes/class-post-type.php:85
+#, php-format
+msgid "No %s found"
+msgstr "Não encontramos %s"
+
+#: ../Odin/core/classes/class-post-type.php:86
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Não encontramos %s na lixeira"
+
+#: ../Odin/core/classes/class-taxonomy.php:77
+#, php-format
+msgid "Add or Remove %ss"
+msgstr ""
+
+#: ../Odin/core/classes/class-taxonomy.php:88
+#, php-format
+msgid "Separate %ss with comma"
+msgstr ""
+
+#: ../Odin/core/classes/class-taxonomy.php:89
+#, php-format
+msgid "Choose from %ss most used"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:20
+msgid "Facebook Like Box"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:21
+msgid "This widget includes a facebook like box on your blog"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:48
+msgid "Title:"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:54
+msgid "Facebook Page URL:"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:60
+msgid "Width:"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:66
+msgid "Height:"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:72
+msgid "Color Scheme:"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:74
+msgid "Dark"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:75
+msgid "Light"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:81
+msgid "Show Friends Faces"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:86
+msgid "Show Posts"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:91
+msgid "Show Header"
+msgstr ""
+
+#: ../Odin/core/classes/widgets/class-widget-like-box.php:96
+msgid "Show Border"
+msgstr ""
+
+#: ../Odin/core/helpers.php:61
+msgid "&laquo; Previous"
+msgstr ""
+
+#: ../Odin/core/helpers.php:62
+msgid "Next &raquo;"
+msgstr ""
+
+#: ../Odin/core/helpers.php:104
+msgid "Related Posts"
+msgstr ""
+
+#: ../Odin/core/helpers.php:235
+msgid "Home"
+msgstr ""
+
+#: ../Odin/core/helpers.php:324
+#, php-format
+msgid "%sCategory: %s%s"
+msgstr ""
+
+#: ../Odin/core/helpers.php:328
+#, php-format
+msgid "%sTag: %s%s"
+msgstr ""
+
+#: ../Odin/core/helpers.php:336
+#, php-format
+msgid "%sSearch result for: &quot;%s&quot;%s"
+msgstr "%sResultado de busca para: &quot;%s&quot;%s"
+
+#: ../Odin/core/helpers.php:342
+msgid "Posted by"
+msgstr "Publicado por"
+
+#: ../Odin/core/helpers.php:386
+msgid "404 Error"
+msgstr "Erro 404"
+
+#: ../Odin/core/helpers.php:393 ../Odin/core/helpers.php:395
+#, php-format
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: ../admin/class-pimap-options.php:44 ../admin/class-pimap-options.php:45
+#: ../admin/view_options.php:8
+msgid "Pimap Options"
+msgstr "Opções Pimap"
+
+#: ../admin/class-pimap-options.php:61
+msgid "Set the options of the plugin Pimap"
+msgstr "Configurações do plugin Pimap"
+
+#: ../admin/class-pimap-options.php:68 ../pimap.php:186 ../pimap.php:189
+msgid "Latitude"
+msgstr "Latitude"
+
+#: ../admin/class-pimap-options.php:81 ../pimap.php:196 ../pimap.php:199
+msgid "Longitude"
+msgstr "Longitude"
+
+#: ../admin/class-pimap-options.php:94
+msgid "Zoom"
+msgstr "Zoom"
+
+#: ../admin/class-pimap-options.php:107
+msgid "Map Size"
+msgstr ""
+
+#: ../pimap.php:128 ../pimap.php:129 ../pimap.php:139
+msgid "Pimap"
+msgstr "Pimap"
+
+#: ../pimap.php:132
 msgid "Edit"
 msgstr "Editar"
 
-#: pimap.php:124
+#: ../pimap.php:133
 msgid "New"
 msgstr "\vNovo"
 
-#: pimap.php:125
+#: ../pimap.php:134
 msgid "View"
 msgstr "Visualizar"
 
-#: pimap.php:126
+#: ../pimap.php:135
 msgid "Search"
 msgstr "Pesquisar"
 
-#: pimap.php:127
+#: ../pimap.php:136
 msgid "Not found"
 msgstr "Nenhum resultado encontrado"
 
-#: pimap.php:128
+#: ../pimap.php:137
 msgid "Not found in trash"
 msgstr "Nenhum resultado encontrado na lixeira"
 
-#: pimap.php:129
+#: ../pimap.php:138
 msgid "Parent:"
 msgstr "Parent:"
 
-#: pimap.php:148
+#: ../pimap.php:140
+msgid "All Pins"
+msgstr "Todos os Pins"
+
+#: ../pimap.php:158
 msgid "Pin Type"
 msgstr "Tipo de Pin"
 
-#: pimap.php:166
+#: ../pimap.php:176
 msgid "Pin Position"
 msgstr "Posição do Pin"
