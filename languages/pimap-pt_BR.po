@@ -1,23 +1,23 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Pimap\n"
-"POT-Creation-Date: 2014-08-26 16:13-0300\n"
-"PO-Revision-Date: 2014-08-26 16:13-0300\n"
-"Last-Translator: Valério <valeriosza@gmail.com>\n"
+"POT-Creation-Date: 2014-08-27 08:44-0300\n"
+"PO-Revision-Date: 2014-08-27 08:46-0300\n"
+"Last-Translator: Leo Baiano <leo@undigital.info>\n"
 "Language-Team: Leo Baiano <leobaiano@lbideias.com.br>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.5\n"
-"X-Poedit-Basepath: ./\n"
+"X-Generator: Poedit 1.6.8\n"
+"X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"X-Poedit-SearchPathExcluded-0: Odin\n"
-"X-Poedit-SearchPathExcluded-1: assets\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPathExcluded-0: Odin\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
 
 #: ../Odin/core/classes/abstracts/abstract-front-end-form.php:287
 msgid "Submit"
@@ -144,8 +144,8 @@ msgstr ""
 msgid "Parent %s:"
 msgstr "Parent %s:"
 
-#: ../Odin/core/classes/class-post-type.php:81 ../pimap.php:130
-#: ../pimap.php:131
+#: ../Odin/core/classes/class-post-type.php:81 ../pimap.php:129
+#: ../pimap.php:130
 msgid "Add New"
 msgstr "Adicionar novo"
 
@@ -297,11 +297,11 @@ msgstr "Opções Pimap"
 msgid "Set the options of the plugin Pimap"
 msgstr "Configurações do plugin Pimap"
 
-#: ../admin/class-pimap-options.php:68 ../pimap.php:186 ../pimap.php:189
+#: ../admin/class-pimap-options.php:68 ../pimap.php:185 ../pimap.php:188
 msgid "Latitude"
 msgstr "Latitude"
 
-#: ../admin/class-pimap-options.php:81 ../pimap.php:196 ../pimap.php:199
+#: ../admin/class-pimap-options.php:81 ../pimap.php:195 ../pimap.php:198
 msgid "Longitude"
 msgstr "Longitude"
 
@@ -311,48 +311,52 @@ msgstr "Zoom"
 
 #: ../admin/class-pimap-options.php:107
 msgid "Map Size"
-msgstr ""
+msgstr "Tamanho do mapa"
 
-#: ../pimap.php:128 ../pimap.php:129 ../pimap.php:139
+#: ../admin/view_options.php:13
+msgid "Saved settings"
+msgstr "Configurações salvas com sucesso"
+
+#: ../pimap.php:127 ../pimap.php:128 ../pimap.php:138
 msgid "Pimap"
 msgstr "Pimap"
 
-#: ../pimap.php:132
+#: ../pimap.php:131
 msgid "Edit"
 msgstr "Editar"
 
-#: ../pimap.php:133
+#: ../pimap.php:132
 msgid "New"
 msgstr "\vNovo"
 
-#: ../pimap.php:134
+#: ../pimap.php:133
 msgid "View"
 msgstr "Visualizar"
 
-#: ../pimap.php:135
+#: ../pimap.php:134
 msgid "Search"
 msgstr "Pesquisar"
 
-#: ../pimap.php:136
+#: ../pimap.php:135
 msgid "Not found"
 msgstr "Nenhum resultado encontrado"
 
-#: ../pimap.php:137
+#: ../pimap.php:136
 msgid "Not found in trash"
 msgstr "Nenhum resultado encontrado na lixeira"
 
-#: ../pimap.php:138
+#: ../pimap.php:137
 msgid "Parent:"
 msgstr "Parent:"
 
-#: ../pimap.php:140
+#: ../pimap.php:139
 msgid "All Pins"
 msgstr "Todos os Pins"
 
-#: ../pimap.php:158
+#: ../pimap.php:157
 msgid "Pin Type"
 msgstr "Tipo de Pin"
 
-#: ../pimap.php:176
+#: ../pimap.php:175
 msgid "Pin Position"
 msgstr "Posição do Pin"
