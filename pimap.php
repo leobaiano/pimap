@@ -90,7 +90,6 @@
 		 */
 		public function require_odin() {
 			if (!class_exists('Odin_Post_Type', false)) {
-				print_r($this);
     			require_once 'Odin/core/classes/class-post-type.php';
 			}
 			if (!class_exists('Odin_Taxonomy', false)) {
